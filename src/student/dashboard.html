@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/47fb921f6f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div>
+      <div class="w-[15%] h-[100vh] pe-5 left-0 fixed">
+        <div class="bg-[#173358] h-full">
+          <div
+            class="h-full py-5 text-[#f1f1f1] flex flex-col items-center justify-between"
+          >
+            <img
+              class="w-24"
+              src="../../public/images/school-logo.png"
+              alt=""
+            />
+
+            <nav class="flex flex-col leading-8">
+              <a class="" href="./dashboard.html"
+                ><i class="fa-solid fa-house"></i> Dashboard</a
+              >
+              <a class="" href="./class-recordings.html"
+                ><i class="fa-solid fa-tv"></i> Class Recordings</a
+              >
+              <a class="" href="./course-material.html"
+                ><i class="fa-solid fa-book"></i> Course Material</a
+              >
+              <a class="" href="./calendar.html"
+                ><i class="fa-regular fa-calendar-days"></i> Calendar</a
+              >
+            </nav>
+
+            <button class="logout p-3">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[15%] h-[100vh] ps-5 fixed right-0">
+        <div class="w-full relative">
+          <div
+            class="transition-all duration-700 ease-in-out bg-[#173358] w-full my-3 flex flex-col items-center rounded-s-lg absolute"
+            id="name-bar-right"
+          >
+            <img
+              class="size-24 my-2 mx-auto rounded-full object-cover"
+              src="../../public/images/ha.jpg"
+              alt=""
+            />
+            <span class="text-[#f1f1f1]">Htay Aung</span>
+            <span class="text-[#f1f1f1]">NCC level 5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- main body but full width -->
+      <main class="w-[full]">
+        <!-- main body with container width -->
+        <div class="w-[70%] mx-auto">
+          <!-- start here -->
+          <div class="h-44 overflow-auto">
+            <div class="name-bar bar-top" id="name-bar">
+              <img
+                class="size-24 object-fit rounded-full mb-4"
+                src="../../public/images/ha.jpg"
+                alt=""
+              />
+              <div class="ms-3 text-[#f1f1f1]">
+                <h2>Htay Aung</h2>
+                <span>NCC level 5 Diploma in Computing</span>
+              </div>
+            </div>
+          </div>
+
+          <section
+            class="flex flex-col items-center justify-between shadow-md bg-[#E1EFF6] p-3 rounded-md"
+          >
+            <div class="flex justify-between items-center px-3 w-full">
+              <h1 class="text-2xl font-bold select-none">Class Recordings</h1>
+              <button>View All</button>
+            </div>
+            <div
+              class="class-rec grid gap-6 grid-flow-col p-4 overflow-x-auto select-none w-[96%] mb-5"
+              id="class-rec"
+            >
+              <!-- javascript -->
+            </div>
+          </section>
+
+          <div class="w-full flex mt-10 justify-between">
+            <div
+              class="w-[49%] shadow-md p-4 roundet-md bg-[#E1EFF6] rounded-md"
+            >
+              <div class="flex w-full justify-between mb-5">
+                <h1 class="text-2xl font-bold">Attendance by class</h1>
+                <div>...</div>
+              </div>
+              <div class="h-[250px]">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+
+            <div class="w-[49%] shadow-md bg-[#E1EFF6] rounded-md">
+              <h1 class="text-2xl font-bold p-3">Course Material</h1>
+              <div
+                class="grid grid-cols-2 gap-4 w-full p-5 bg-balck h-[85%]"
+                id="courses"
+              >
+                <!-- javascript -->
+              </div>
+            </div>
+          </div>
+
+          <div class="flex my-10 justify-between">
+            <div
+              class="calender w-[60%] shadow-md p-4 rounded-lg text-[#173358] bg-[#E1EFF6]"
+            >
+              <h1 class="text-2xl font-bold">Calender</h1>
+              <div class="">
+                <div class="flex w-full items-center justify-center mb-5">
+                  <button class="calender-btn" id="pre"></button>
+                  <h1 class="px-6" id="current-date">May 2024</h1>
+                  <button class="calender-btn" id="next">></button>
+                </div>
+                <ul class="weeks flex justify-evenly">
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+                  <li>Sun</li>
+                </ul>
+                <ul class="days flex justify-start flex-wrap"></ul>
+              </div>
+            </div>
+
+            <div class="w-[45%] h-full flex flex-col justify-between ms-5">
+              <div class="shadow-lg h-[250px] p-5 rounded-md bg-[#E1EFF6]">
+                <canvas id="pie-chart"></canvas>
+              </div>
+              <div class="h-[200px] mt-5 shadow-sm">
+                <div
+                  class="flex flex-col h-full rounded-lg overflow-hidden relative text-white shadow-lg bg-[#E1EFF6]"
+                >
+                  <img
+                    class="w-14 h-14 rounded-full absolute translate-x-[-50%] translate-y-[-50%] left-[50%] top-[50%]"
+                    src="../../public/images/payment1.jpg"
+                  />
+                  <div class="payment-con p-5 h-[50%]"></div>
+                  <div class="p-5 h-[50%] pt-10">
+                    <p class="text-center text-black">Payment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

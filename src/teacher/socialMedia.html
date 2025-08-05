@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T4K3Shii</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 w-full fixed z-50"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >T4K3Shii</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                aria-current="page"
+                >New Feed</a
+              >
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Dropdown
+                <svg
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >New Feed</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Video</a
+                    >
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Notifications</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Setting</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Insight</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="w-full flex space-x-2 pt-20">
+      <!-- this is for left nav bar -->
+      <div class="w-[19%] h-[300vh] bg-white shadow-lg">
+        <div class="w-[90%] h-[300vh] bg-white rounded-md shadow-lg mt-4 mb-3">
+          <div class="w-[98%] h-[50px] ps-3 flex items-center shadow-lg">
+            <div class="">
+              <img
+                src="../teacher/js/photo/han.jpg"
+                class="w-[40px] h-[40px] rounded-full me-3"
+                alt=""
+              />
+            </div>
+            Htay Aung
+          </div>
+          <div
+            class="w-[98%] h-[50px] ps-5 rounded-md shadow-lg flex items-center mb-3"
+          >
+            <div class="w-[40px] h-full flex items-center">
+              <i class="bi bi-people-fill text-blue-500 text-xl"></i>
+            </div>
+            Friends
+          </div>
+          <div
+            class="w-[98%] h-[50px] flex rounded-md shadow-lg items-center ps-4 mb-3"
+          >
+            <i class="bi bi-file-arrow-down text-2xl text-blue-500 me-3"></i>
+            Saved
+          </div>
+          <div
+            class="w-[98%] h-[50px] flex rounded-md shadow-lg items-center ps-4 mb-3"
+          >
+            <i class="bi bi-clock-history text-2xl text-blue-500 me-3"></i>
+            Memories
+          </div>
+        </div>
+      </div>
+
+      <!-- this is for middle content -->
+      <div class="w-[60%] h-[300vh] bg-white shadow-lg">
+        <div
+          class="w-full h-[300px] rounded-md flex space-x-2 items-center justify-center mb-4 shadow-lg"
+        >
+          <div class="w-[19%] h-[280px] rounded-md flex flex-col shadow-lg">
+            <div class="w-full h-[180px] bg-white rounded-s-md">
+              <img
+                src="../teacher/js/photo/luffy.jfif"
+                alt=""
+                class="w-full h-[180px] rounded-md object-fill"
+              />
+            </div>
+            <div
+              class="w-full h-[100px] bg-white rounded-md flex flex-col items-center justify-center"
+            >
+              <i class="bi bi-plus-circle-fill text-black text-xl"></i><br />
+              <h4 class="text-black">Add Story</h4>
+            </div>
+          </div>
+          <div
+            class="w-[19%] h-[280px] bg-red-200 rounded-md shadow-lg relative flex"
+          >
+            <img
+              src="../teacher/js/photo/trip.png.jpg"
+              class="w-full h-[280px] object-contain"
+              alt=""
+            />
+            <div class="absolute bottom-3 start-7">
+              <p>New Next IC</p>
+            </div>
+            <div
+              class="absolute rounded-full size-10 bg-black top-3 start-3"
+            ></div>
+          </div>
+          <div
+            class="w-[19%] h-[280px] bg-red-200 rounded-md shadow-lg relative flex"
+          >
+            <img
+              src="../teacher/js/photo/missing.jpg"
+              class="w-full h-[280px] object-contain"
+              alt=""
+            />
+            <div class="absolute bottom-3 start-7">
+              <p>Htay Aung</p>
+            </div>
+            <div
+              class="absolute rounded-full size-10 bg-black top-3 start-3"
+            ></div>
+          </div>
+          <div
+            class="w-[19%] h-[280px] bg-red-200 rounded-md shadow-lg relative flex"
+          >
+            <img
+              src="../teacher/js/photo/painting.JPG"
+              class="w-full h-[280px] object-contain"
+              alt=""
+            />
+            <div class="absolute bottom-3 start-7">
+              <p>Garvial</p>
+            </div>
+            <div
+              class="absolute rounded-full size-10 bg-black top-3 start-3"
+            ></div>
+          </div>
+          <div
+            class="w-[19%] h-[280px] bg-red-200 rounded-md shadow-lg relative flex"
+          >
+            <img
+              src="../teacher/js/photo/mira.jpg"
+              class="w-full h-[280px] object-contain"
+              alt=""
+            />
+            <div class="absolute bottom-3 start-7">
+              <p>Mira</p>
+            </div>
+            <div
+              class="absolute rounded-full size-10 bg-black top-3 start-3"
+            ></div>
+          </div>
+        </div>
+        <div class="w-full h-[700px] bg-white rounded-md shadow-lg mt-8 mb-2">
+          <div class="w-full h-[80px] bg-white rounded-md flex">
+            <div
+              class="w-[6.8%] h-full rounded-full bg-red-500 me-4 ms-2"
+            ></div>
+            <div class="w-[92%] h-full flex flex-col pt-2">
+              <div class="w-full h-[30px]">Zin Wai Yan</div>
+              <div class="w-full h-[50px] flex">
+                <p class="me-2">5hr</p>
+                <i class="bi bi-globe-americas"></i>
+              </div>
+            </div>
+          </div>
+          <div class="w-full h-[40px] ps-10 pt-3">
+            <p>Die with memories, not with dreams</p>
+          </div>
+          <div class="w-full h-[510px]">
+            <img
+              src="../teacher/js/photo/missing.jpg"
+              class="w-full h-[510px] object-contain"
+              alt=""
+            />
+          </div>
+          <div class="w-full h-[30px] flex items-center justify-center">
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-hand-thumbs-up text-3xl"></i> Like
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-chat text-3xl"></i> Comment
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-chat-dots-fill text-3xl"></i> Message
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-forward text-3xl"></i> Share
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-[700px] bg-white rounded-md shadow-lg mt-8 mb-2">
+          <div class="w-full h-[80px] bg-white rounded-md flex">
+            <div
+              class="w-[6.8%] h-full rounded-full bg-blue-700 me-4 ms-2"
+            ></div>
+            <div class="w-[92%] h-full flex flex-col pt-2">
+              <div class="w-full h-[30px]">Han Lyn Naing</div>
+              <div class="w-full h-[50px] flex">
+                <p class="me-2">6hr</p>
+                <i class="bi bi-globe-americas"></i>
+              </div>
+            </div>
+          </div>
+          <div class="w-full h-[40px] ps-10 pt-3">
+            <p>Second Family....</p>
+          </div>
+          <div class="w-full h-[510px]">
+            <img
+              src="../teacher/js/photo/han.jpg"
+              class="w-full h-[510px] object-contain"
+              alt=""
+            />
+          </div>
+          <div class="w-full h-[30px] flex items-center justify-center">
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-hand-thumbs-up text-3xl"></i> Like
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-chat text-3xl"></i> Comment
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-chat-dots-fill text-3xl"></i> Message
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-forward text-3xl"></i> Share
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-[700px] bg-white rounded-md shadow-lg mt-8 mb-2">
+          <div class="w-full h-[80px] bg-white rounded-md flex">
+            <div class="w-[6.8%] h-full rounded-full bg-black me-4 ms-2"></div>
+            <div class="w-[92%] h-full flex flex-col pt-2">
+              <div class="w-full h-[30px]">Htay Aung</div>
+              <div class="w-full h-[50px] flex">
+                <p class="me-2">6hr</p>
+                <i class="bi bi-globe-americas"></i>
+              </div>
+            </div>
+          </div>
+          <div class="w-full h-[40px] ps-10 pt-3">
+            <p>The best things that I ever met.</p>
+          </div>
+          <div class="w-full h-[510px]">
+            <img
+              src="../teacher/js/photo/photo_2024-09-25_00-05-47.jpg"
+              class="w-full h-[510px] object-contain"
+              alt=""
+            />
+          </div>
+          <div class="w-full h-[30px] flex items-center justify-center">
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-hand-thumbs-up text-3xl"></i> Like
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-chat text-3xl"></i> Comment
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-chat-dots-fill text-3xl"></i> Message
+            </div>
+            <div class="w-[20%] h-[15px]">
+              <i class="bi bi-forward text-3xl"></i> Share
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[19%] h-300vh] bg-white shadow-lg"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  </body>
+</html>
